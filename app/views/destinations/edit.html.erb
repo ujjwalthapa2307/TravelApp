@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>Thapa</h1>
+  </div>
+</div>
+
+<div class="destination">
+  <div class="container">
+      <%= image_tag @destination.image %>
+      <%= form_for(@destination) do |d|%>
+      <div class="col-sm-12">
+        <%= d.label :Description %><br>
+        <%= d.text_area :description, rows: '10' %><br>
+        <%= d.label :Name %><br>
+        <%= d.text_area :name%><br>
+      </div>
+
+      <div class="actions">
+        <%= d.submit "Create" %>
+      </div>
+  	  <% end %>
+   </div>
+</div>
