@@ -1,7 +1,7 @@
 <div class="header">
   <div class="container">
     <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
-    <h1>BokenjiKan</h1>
+    <h1>Thapa</h1>
   </div>
 </div>
 
@@ -9,15 +9,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        
-        <% @destination.each do |d| %>
         <div class="card col-xs-4">
-          <%= image_tag d.image %>
-          <h2><%= d.name %></h2>
-          <p><%= d.description %></p>
+          <%= image_tag @destination.image %>
+          <h2><%= @destination.name %></h2>
+          <p><%= @destination.description %></p>
         </div>
-        <% end %>
-
       </div>
     </div>
   </div>
