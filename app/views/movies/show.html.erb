@@ -1,0 +1,18 @@
+<div class="header">
+  <div class="container">
+      <div>
+         <%= image_tag @movie.image %>
+        <p> <%= @movie.release_year %>  </p>
+        <p> <%= @movie.plot%> </p>
+      </div>
+    </div>
+
+    <h2>Cast</h2>
+    <%= @actors.each do |a|%>
+    <div>
+      <%= image_tag a.image%>
+      <h3> <%= a.first_name%> <%= a.last_name%> </h3>
+      <p> <%= a.bio%> </p>
+    </div>
+    <% end %>
+</div>
